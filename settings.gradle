@@ -1,0 +1,24 @@
+include ':app', 'core'
+
+// all sub-projects exclude app, core
+gradle.ext.demos = []
+
+acquireDemos()
+includeDemos()
+
+def acquireDemos() {
+    fileTree(".").matching {
+        include("*/build.gradle")
+        exclude("**/app", "**/core")
+    }.each {
+        def demo = it.getParentFile().name
+        gradle.ext.demos.add(":" + demo)
+    }
+}
+
+def includeDemos() {
+    gradle.ext.demos.each {
+        println("include " + it)
+        include(it)
+    }
+}

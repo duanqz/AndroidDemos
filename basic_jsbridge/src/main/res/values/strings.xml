@@ -1,0 +1,3 @@
+<resources>
+    <string name="js_bridge_description">Demonstrate two way communication of javascript and java.</string>
+</resources>

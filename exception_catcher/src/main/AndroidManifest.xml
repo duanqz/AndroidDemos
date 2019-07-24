@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.xo.demo.exception_catcher" >
+    <application>
+        <activity
+            android:name=".ui.ExceptionCatcherActivity"
+            android:description="@string/exception_catcher_description">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="org.xo.demo.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

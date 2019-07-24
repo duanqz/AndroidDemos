@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.xo.demo.basic_jsbridge.BasicJsBridgeActivity">
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/android_view"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/design_default_color_primary_dark"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="I am android view"
+            android:textColor="@android:color/white"
+            android:paddingBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/edit_text_to_web"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:hint="Enter message to web"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:paddingBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btn_send_to_web"
+            style="@android:style/Widget.Material.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Send to web"
+            android:paddingBottom="8dp"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
